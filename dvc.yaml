@@ -42,6 +42,17 @@ stages:
     outs:
       - artifacts/model_dir/model.pkl
 
+  evaluate:
+    cmd: python src/stage_04_evaluate.py --config=config/config.yaml
+    deps:
+      - src/stage_04_evaluate.py
+      - src/utils/all_utils.py
+      - config/config.yaml
+      - artifacts/split_data_dir/test.csv
+      - artifacts/model_dir/model.pkl
+    outs:
+      - artifacts/report_dir/report.json
+
 
 
 

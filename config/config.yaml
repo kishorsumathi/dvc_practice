@@ -11,3 +11,6 @@ artifacts:
 
   model_dir: model_dir
   saved_model: model.pkl
+
+  report_dir: report_dir
+  report: report.json
