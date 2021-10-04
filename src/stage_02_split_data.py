@@ -21,7 +21,7 @@ def split_data(config_path,params_path):
 
       raw_local_dir_path= os.path.join(artifacts_dir,raw_local_dir)
       data_path=os.path.join(raw_local_dir_path,raw_local_file)
-      df = pd.read_csv(data_path,sep=";")
+      df = pd.read_csv(data_path)
       train,test=train_test_split(df,test_size=test_ratio,random_state=random_ste)
       train_data_path= os.path.join(artifacts_dir,split_data_dir,train_data_filename)
       test_data_path= os.path.join(artifacts_dir,split_data_dir,train_data_filename_test)
